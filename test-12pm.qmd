@@ -8,18 +8,24 @@ editor: visual
 
 ## Set Up chunk
 ```{r}
-library(tidyverse)
-library(lterdatasampler)
+#| label: set up
+#| message: false
+library(tidyverse) #general use package of data frames
+library(lterdatasampler) #package of fata drames 
 
-data("pie_crab")
+data("pie_crab") # importing pie_crab data 
 ```
 
 
 # New Section: exploratory visualization
 ```{r}
 #| label: latitude size plot
-ggplot(data = pie_crab, 
-       aes(x = latitude, 
-           y = size))
+# base layer for plot
+ggplot(data = pie_crab, #data is pie_crab
+       aes(x = latitude, #x is lat
+           y = size, #y is size 
+           color = site)) +
+  geom_point()+ 
+  theme_minimal() #changing theme to minimal
 ```
 
