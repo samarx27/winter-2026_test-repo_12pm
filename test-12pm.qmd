@@ -1,0 +1,16 @@
+---
+title: "workshop-test-repo-12pm"
+author: "Sequoia Marx"
+date: "2/20/2026"
+format: html
+editor: visual
+---
+
+## Set Up chunk
+```{r}
+library(tidyverse)
+library(lterdatasampler)
+
+data("pie_crab")
+```
+
